@@ -17,9 +17,9 @@ from tensorflow.keras.callbacks import TensorBoard
 print(tf.__version__)
 
 
-Datadir = 'DatasetVideos'
+Datadir = 'data'
 
-Categories = ['AbrirTampa','FecharTampa','TrocarCartucho']
+Categories = ['component','notcomponent']
 
 NUM_CHANNEL = 3
 IMG_SIZE = 160
@@ -27,7 +27,7 @@ training_data = []
 training_Result = []
 
 for Cat in Categories:
-    path = Datadir + '/' + Cat + '/frames'
+    path = Datadir 
    
     for fold in os.listdir(path):
          for img in os.listdir(path + '/' + fold):
